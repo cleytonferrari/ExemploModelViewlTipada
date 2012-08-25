@@ -1,0 +1,35 @@
+﻿@model  ModelViewTipada.Models.Pessoa
+@{
+    ViewBag.Title = "Cadastro de Pessoa";
+}
+
+<p>@ViewBag.erro</p>
+<form method="POST" action="~/Home/Listar">
+    <fieldset>
+        <legend>Cadastro de Pessoa</legend>
+        
+        <div>
+            <label>Código</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.PessoaId" id="PessoaId" name="PessoaId"/>
+        </div>
+        
+        <div>
+            <label>Nome</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Nome" id="Nome" name="Nome"/>
+        </div>
+        
+        <div>
+            <label>Twitter</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Twitter" id="Twitter" name="Twitter"/>
+        </div>
+        <div>
+            <input type="submit" value="Enviar"/>
+        </div>
+    </fieldset>
+</form>
